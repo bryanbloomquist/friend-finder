@@ -18,11 +18,11 @@ module.exports = function(app) {
     // });
 
     app.post("/api/friends", function(req, res) {
-        var newfriend = req.body;
-        // newfriend.routeName = newfriend.name.replace(/\s+/g, "").toLowerCase();
-        console.log(newfriend);
-        friendsList.push(newfriend);
-        res.json(newfriend);
+        var newFriend = req.body;
+        // newfriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
+        console.log(newFriend);
+        friendsList.push(newFriend);
+        res.json(newFriend);
     });
     
 }
