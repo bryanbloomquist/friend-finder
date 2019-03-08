@@ -177,7 +177,9 @@
             ]
         };
         console.log(newFriend);
-        $.post("/api/friends", newFriend);
+        $.post("/api/friends", newFriend, function(data){
+
+        })
     })
         
     </script>
