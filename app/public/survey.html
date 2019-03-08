@@ -8,7 +8,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity = "sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin = "anonymous">
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity = "sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin = "anonymous">
-        <title>Friends Finder</title>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>Nerd Friend Finder</title>
     </head>
 
     <body>
@@ -20,22 +21,165 @@
                 <h3>About You</h3>
                 <div class = "form-group">
                     <label for = "user-name">Name (Required)</label>
-                    <input type = "text" id = "user-name">
+                    <input type = "text" class = "form-control" id = "user-name">
                 </div>
                 <div class = "form-group">
-                    <label for = "user-image">Link To Photo Image (Required)</label>
-                    <input type = "text" id = "user-image">
+                    <label for = "user-photo">Link To Photo Image (Required)</label>
+                    <input type = "text" class = "form-control" id = "user-photo">
                 </div>
+                <hr>
+                <h3>Question One</h3>
+                <div class = "form-group">
+                    <label for = "question-one">I like to play Role Playing Game's (ex. Dungeons & Dragon).</label>
+                    <select class = "form-control" id = "question-one">
+                        <!-- <option selected>Select An Option</option> -->
+                        <option value = "1">1 (Strongly Disagree)</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3 (No Opinion)</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <h3>Question Two</h3>
+                <div class = "form-group">
+                    <label for = "question-two">I prefer single player video games over online multiplayer video games.</label>
+                    <select class = "form-control" id = "question-two">
+                        <!-- <option selected>Select An Option</option> -->
+                        <option value = "1">1 (Strongly Disagree)</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3 (No Opinion)</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <h3>Question Three</h3>
+                <div class = "form-group">
+                    <label for = "question-three">I prefer DC comics over Marvel comics.</label>
+                    <select class = "form-control" id = "question-three">
+                        <!-- <option selected>Select An Option</option> -->
+                        <option value = "1">1 (Strongly Disagree)</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3 (No Opinion)</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <h3>Question Four</h3>
+                <div class = "form-group">
+                    <label for = "question-four">Star Trek is a better franchise than Star Wars.</label>
+                    <select class = "form-control" id = "question-four">
+                        <!-- <option selected>Select An Option</option> -->
+                        <option value = "1">1 (Strongly Disagree)</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3 (No Opinion)</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <h3>Question Five</h3>
+                <div class = "form-group">
+                    <label for = "question-five">The Lord of the Rings is an epic movie trilogy.</label>
+                    <select class = "form-control" id = "question-five">
+                        <!-- <option selected>Select An Option</option> -->
+                        <option value = "1">1 (Strongly Disagree)</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3 (No Opinion)</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <h3>Question Six</h3>
+                <div class = "form-group">
+                    <label for = "question-six">I like science fiction books and/or movies.</label>
+                    <select class = "form-control" id = "question-six">
+                        <!-- <option selected>Select An Option</option> -->
+                        <option value = "1">1 (Strongly Disagree)</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3 (No Opinion)</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <h3>Question Seven</h3>
+                <div class = "form-group">
+                    <label for = "question-seven">I play in one or more fantasy sports leagues.</label>
+                    <select class = "form-control" id = "question-seven">
+                        <!-- <option selected>Select An Option</option> -->
+                        <option value = "1">1 (Strongly Disagree)</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3 (No Opinion)</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <h3>Question Eight</h3>
+                <div class = "form-group">
+                    <label for = "question-eight">I know at least one coding language.</label>
+                    <select class = "form-control" id = "question-eight">
+                        <!-- <option selected>Select An Option</option> -->
+                        <option value = "1">1 (Strongly Disagree)</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3 (No Opinion)</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <h3>Question Nine</h3>
+                <div class = "form-group">
+                    <label for = "question-nine">Monopoly is a better board game than Settlers of Catan.</label>
+                    <select class = "form-control" id = "question-nine">
+                        <!-- <option selected>Select An Option</option> -->
+                        <option value = "1">1 (Strongly Disagree)</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3 (No Opinion)</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <h3>Question Ten</h3>
+                <div class = "form-group">
+                    <label for = "question-ten">I have reread more than one book multiple times.</label>
+                    <select class = "form-control" id = "question-ten">
+                        <!-- <option selected>Select An Option</option> -->
+                        <option value = "1">1 (Strongly Disagree)</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3 (No Opinion)</option>
+                        <option value = "4">4</option>
+                        <option value = "5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <button type = "submit" class = "btn btn-primary" id = "submit-user">Submit <i class = "fas fa-arrow-circle-right"></i></button>
             </form>
-
-
         </div>
-
+        <div class = "container">
+            <p><a href = "/api/friends">API Friends List</a> | <a href = "https://github.com/bryanbloomquist/friend-finder">Github Repo</a></p>
+        </div>
+    
 
     <script type = "text/javascript">
+    
+    $("#submit-user").on("click", function(even) {
+        event.preventDefault();
+        var newFriend = {
+            name: $("#user-name").val().trim(),
+            photo: $("#user-photo").val().trim(),
+            scores: [
+                $("#question-one").val().trim(),
+                $("#question-two").val().trim(),
+                $("#question-three").val().trim(),
+                $("#question-four").val().trim(),
+                $("#question-five").val().trim(),
+                $("#question-six").val().trim(),
+                $("#question-seven").val().trim(),
+                $("#question-eight").val().trim(),
+                $("#question-nine").val().trim(),
+                $("#question-ten").val().trim(),
+            ]
+        };
+        console.log(newFriend);
+        $.post("/api/friends", newFriend);
+    })
         
-    
-    
     </script>
 
     </body>
