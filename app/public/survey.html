@@ -8,7 +8,6 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity = "sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin = "anonymous">
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity = "sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin = "anonymous">
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <title>Nerd Friend Finder</title>
     </head>
 
@@ -148,18 +147,22 @@
                         <option value = "5">5 (Strongly Agree)</option>
                     </select>
                 </div>
-                <button type = "submit" class = "btn btn-primary" id = "submit">Submit <i class = "fas fa-arrow-circle-right"></i></button>
+                <button type = "submit" class = "btn btn-primary" id = "submit" data-toggle = "modal" data-target = "#match-modal">Submit <i class = "fas fa-arrow-circle-right"></i></button>
             </form>
         </div>
+
         <div class = "container">
             <p><a href = "/api/friends">API Friends List</a> | <a href = "https://github.com/bryanbloomquist/friend-finder">Github Repo</a></p>
         </div>
-        <div class = "modal fade" id = "match-modal" role = "dialog">
-            <div class = "modal-dialog">
+
+        <div class = "modal fade" id = "match-modal" tabindex = "-1" role = "dialog" aria-labelledby = "modal-label" aria-hidden = "true">
+            <div class = "modal-dialog" role = "document">
                 <div class = "modal-content">
                     <div class = "modal-header">
                         <h5 class = "modal-title" id = "modal-label">Your Nerd BFF Is...</h5>
-                        <button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+                        <button type = "button" class = "close" data-dismiss = "modal" aria-label = "Close">
+                            <span aria-hidden = "true">&times;</span>
+                        </button>
                     </div>
                     <div class = "modal-body">
                         <span id = "match-name"></span>
@@ -173,9 +176,11 @@
         </div>
     
 
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin = "anonymous"></script>
+    <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin = "anonymous"></script>
 
     <script type = "text/javascript">
-
 
     $("#submit").on("click", function(event) {
         event.preventDefault();
@@ -198,10 +203,8 @@
         $.post("/api/friends", newFriend)
         .done(function(data) {
             console.log(data);
-            $("#match-modal").on("show.bs.modal", function() {
-                $("#match-name").html("<h2>" + data.matchName + "</h2>");
-                $("#match-photo").html("<img src = '" + data.matchPhoto + "'>");
-            });
+            $("#match-name").html("<h2>" + data.matchName + "</h2>");
+            $("#match-photo").html("<img src = '" + data.matchPhoto + "'>");
         })
     })
 
