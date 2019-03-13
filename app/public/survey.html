@@ -8,151 +8,158 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity = "sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin = "anonymous">
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity = "sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin = "anonymous">
+        <link rel = "stylesheet" type = "text/css" href = "css/style.css">
         <title>Nerd Friend Finder</title>
     </head>
 
     <body>
         
         <div class = "container">
-            <h1>Survey Questions</h1>
-            <hr>
-            <form>
-                <h3>About You</h3>
-                <div class = "form-group">
-                    <label for = "name">Name (Required)</label>
-                    <input type = "text" class = "form-control" id = "name">
+            <div class = "row justify-content-center">
+                <div class = "col-md-6 transparent">
+                    <form>
+                        <h1>About You</h1>
+                        <div class = "form-group">
+                            <label for = "name"><h5>Name (Required)</h5></label>
+                            <input type = "text" class = "form-control" id = "name">
+                        </div>
+                        <div class = "form-group">
+                            <label for = "photo"><h5>Link To Photo Image (Required)</h5></label>
+                            <input type = "text" class = "form-control" id = "photo">
+                        </div>
+                        <hr>
+                        <h1>How strongly do you agree with the following:</h1>
+                        <hr>
+                        <h3>Statement One</h3>
+                        <div class = "form-group">
+                            <label for = "q0"><h5>I like to play Role Playing Game's. (ex. Dungeons & Dragon)</h5></label>
+                            <select class = "form-control" id = "q0">
+                                <option value = "1">1 (Strongly Disagree)</option>
+                                <option value = "2">2</option>
+                                <option selected value = "3">3 (No Opinion)</option>
+                                <option value = "4">4</option>
+                                <option value = "5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <h3>Statement Two</h3>
+                        <div class = "form-group">
+                            <label for = "q1"><h5>I prefer to play single player video games over online multiplayer video games.</h5></label>
+                            <select class = "form-control" id = "q1">
+                                <option value = "1">1 (Strongly Disagree)</option>
+                                <option value = "2">2</option>
+                                <option selected value = "3">3 (No Opinion)</option>
+                                <option value = "4">4</option>
+                                <option value = "5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <h3>Statement Three</h3>
+                        <div class = "form-group">
+                            <label for = "q2"><h5>I prefer DC comics over Marvel comics.</h5></label>
+                            <select class = "form-control" id = "q2">
+                                <option value = "1">1 (Strongly Disagree)</option>
+                                <option value = "2">2</option>
+                                <option selected value = "3">3 (No Opinion)</option>
+                                <option value = "4">4</option>
+                                <option value = "5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <h3>Statement Four</h3>
+                        <div class = "form-group">
+                            <label for = "q3"><h5>I think Star Trek is a better franchise than Star Wars.</h5></label>
+                            <select class = "form-control" id = "q3">
+                                <option value = "1">1 (Strongly Disagree)</option>
+                                <option value = "2">2</option>
+                                <option selected value = "3">3 (No Opinion)</option>
+                                <option value = "4">4</option>
+                                <option value = "5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <h3>Statement Five</h3>
+                        <div class = "form-group">
+                            <label for = "q4"><h5>I love The Lord of the Rings movie trilogy.</h5></label>
+                            <select class = "form-control" id = "q4">
+                                <option value = "1">1 (Strongly Disagree)</option>
+                                <option value = "2">2</option>
+                                <option selected value = "3">3 (No Opinion)</option>
+                                <option value = "4">4</option>
+                                <option value = "5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <h3>Statement Six</h3>
+                        <div class = "form-group">
+                            <label for = "q5"><h5>I like science fiction books and/or movies.</h5></label>
+                            <select class = "form-control" id = "q5">
+                                <option value = "1">1 (Strongly Disagree)</option>
+                                <option value = "2">2</option>
+                                <option selected value = "3">3 (No Opinion)</option>
+                                <option value = "4">4</option>
+                                <option value = "5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <h3>Statement Seven</h3>
+                        <div class = "form-group">
+                            <label for = "q6"><h5>I play in one or more fantasy sports leagues.</h5></label>
+                            <select class = "form-control" id = "q6">
+                                <option value = "1">1 (Strongly Disagree)</option>
+                                <option value = "2">2</option>
+                                <option selected value = "3">3 (No Opinion)</option>
+                                <option value = "4">4</option>
+                                <option value = "5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <h3>Statement Eight</h3>
+                        <div class = "form-group">
+                            <label for = "q7"><h5>I am knowledgeable around computers. (ex. I know a programming language.)</h5></label>
+                            <select class = "form-control" id = "q7">
+                                <option value = "1">1 (Strongly Disagree)</option>
+                                <option value = "2">2</option>
+                                <option selected value = "3">3 (No Opinion)</option>
+                                <option value = "4">4</option>
+                                <option value = "5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <h3>Statement Nine</h3>
+                        <div class = "form-group">
+                            <label for = "q8"><h5>Monopoly is a better board game than Settlers of Catan.</h5></label>
+                            <select class = "form-control" id = "q8">
+                                <option value = "1">1 (Strongly Disagree)</option>
+                                <option value = "2">2</option>
+                                <option selected value = "3">3 (No Opinion)</option>
+                                <option value = "4">4</option>
+                                <option value = "5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <h3>Statement Ten</h3>
+                        <div class = "form-group">
+                            <label for = "q9"><h5>I have read the same book more than once.</h5></label>
+                            <select class = "form-control" id = "q9">
+                                <option value = "1">1 (Strongly Disagree)</option>
+                                <option value = "2">2</option>
+                                <option selected value = "3">3 (No Opinion)</option>
+                                <option value = "4">4</option>
+                                <option value = "5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <button type = "submit" class = "btn btn-secondary btn-lg" id = "submit" data-toggle = "modal" data-target = "#match-modal">Submit <i class = "fas fa-arrow-circle-right"></i></button>
+                        <hr>
+                    </form>
+                    <div class = "row justify-content-center">
+                        <div class = "col-md-6">
+                            <p><a href = "/api/friends">API Friends List</a> | <a href = "https://github.com/bryanbloomquist/friend-finder">Github Repo</a></p>
+                        </div>
+                    </div>
                 </div>
-                <div class = "form-group">
-                    <label for = "photo">Link To Photo Image (Required)</label>
-                    <input type = "text" class = "form-control" id = "photo">
-                </div>
-                <hr>
-                <h3>Question One</h3>
-                <div class = "form-group">
-                    <label for = "q0">I like to play Role Playing Game's (ex. Dungeons & Dragon).</label>
-                    <select class = "form-control" id = "q0">
-                        <option selected>Select An Option</option>
-                        <option value = "1">1 (Strongly Disagree)</option>
-                        <option value = "2">2</option>
-                        <option value = "3">3 (No Opinion)</option>
-                        <option value = "4">4</option>
-                        <option value = "5">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <h3>Question Two</h3>
-                <div class = "form-group">
-                    <label for = "q1">I prefer single player video games over online multiplayer video games.</label>
-                    <select class = "form-control" id = "q1">
-                        <option selected>Select An Option</option>
-                        <option value = "1">1 (Strongly Disagree)</option>
-                        <option value = "2">2</option>
-                        <option value = "3">3 (No Opinion)</option>
-                        <option value = "4">4</option>
-                        <option value = "5">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <h3>Question Three</h3>
-                <div class = "form-group">
-                    <label for = "q2">I prefer DC comics over Marvel comics.</label>
-                    <select class = "form-control" id = "q2">
-                        <option selected>Select An Option</option>
-                        <option value = "1">1 (Strongly Disagree)</option>
-                        <option value = "2">2</option>
-                        <option value = "3">3 (No Opinion)</option>
-                        <option value = "4">4</option>
-                        <option value = "5">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <h3>Question Four</h3>
-                <div class = "form-group">
-                    <label for = "q3">Star Trek is a better franchise than Star Wars.</label>
-                    <select class = "form-control" id = "q3">
-                        <option selected>Select An Option</option>
-                        <option value = "1">1 (Strongly Disagree)</option>
-                        <option value = "2">2</option>
-                        <option value = "3">3 (No Opinion)</option>
-                        <option value = "4">4</option>
-                        <option value = "5">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <h3>Question Five</h3>
-                <div class = "form-group">
-                    <label for = "q4">The Lord of the Rings is an epic movie trilogy.</label>
-                    <select class = "form-control" id = "q4">
-                        <option selected>Select An Option</option>
-                        <option value = "1">1 (Strongly Disagree)</option>
-                        <option value = "2">2</option>
-                        <option value = "3">3 (No Opinion)</option>
-                        <option value = "4">4</option>
-                        <option value = "5">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <h3>Question Six</h3>
-                <div class = "form-group">
-                    <label for = "q5">I like science fiction books and/or movies.</label>
-                    <select class = "form-control" id = "q5">
-                        <option selected>Select An Option</option>
-                        <option value = "1">1 (Strongly Disagree)</option>
-                        <option value = "2">2</option>
-                        <option value = "3">3 (No Opinion)</option>
-                        <option value = "4">4</option>
-                        <option value = "5">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <h3>Question Seven</h3>
-                <div class = "form-group">
-                    <label for = "q6">I play in one or more fantasy sports leagues.</label>
-                    <select class = "form-control" id = "q6">
-                        <option selected>Select An Option</option>
-                        <option value = "1">1 (Strongly Disagree)</option>
-                        <option value = "2">2</option>
-                        <option value = "3">3 (No Opinion)</option>
-                        <option value = "4">4</option>
-                        <option value = "5">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <h3>Question Eight</h3>
-                <div class = "form-group">
-                    <label for = "q7">I know at least one coding language.</label>
-                    <select class = "form-control" id = "q7">
-                        <option selected>Select An Option</option>
-                        <option value = "1">1 (Strongly Disagree)</option>
-                        <option value = "2">2</option>
-                        <option value = "3">3 (No Opinion)</option>
-                        <option value = "4">4</option>
-                        <option value = "5">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <h3>Question Nine</h3>
-                <div class = "form-group">
-                    <label for = "q8">Monopoly is a better board game than Settlers of Catan.</label>
-                    <select class = "form-control" id = "q8">
-                        <option selected>Select An Option</option>
-                        <option value = "1">1 (Strongly Disagree)</option>
-                        <option value = "2">2</option>
-                        <option value = "3">3 (No Opinion)</option>
-                        <option value = "4">4</option>
-                        <option value = "5">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <h3>Question Ten</h3>
-                <div class = "form-group">
-                    <label for = "q9">I have reread more than one book multiple times.</label>
-                    <select class = "form-control" id = "q9">
-                        <option selected>Select An Option</option>
-                        <option value = "1">1 (Strongly Disagree)</option>
-                        <option value = "2">2</option>
-                        <option value = "3">3 (No Opinion)</option>
-                        <option value = "4">4</option>
-                        <option value = "5">5 (Strongly Agree)</option>
-                    </select>
-                </div>
-                <button type = "submit" class = "btn btn-primary" id = "submit" data-toggle = "modal" data-target = "#match-modal">Submit <i class = "fas fa-arrow-circle-right"></i></button>
-            </form>
-        </div>
-
-        <div class = "container">
-            <p><a href = "/api/friends">API Friends List</a> | <a href = "https://github.com/bryanbloomquist/friend-finder">Github Repo</a></p>
+            </div>
         </div>
 
         <div class = "modal fade" id = "match-modal" tabindex = "-1" role = "dialog" aria-labelledby = "modal-label" aria-hidden = "true">
@@ -184,28 +191,36 @@
 
     $("#submit").on("click", function(event) {
         event.preventDefault();
-        var newFriend = {
-            name: $("#name").val().trim(),
-            photo: $("#photo").val().trim(),
-            scores: [
-                $("#q0").val().trim(),
-                $("#q2").val().trim(),
-                $("#q3").val().trim(),
-                $("#q4").val().trim(),
-                $("#q5").val().trim(),
-                $("#q6").val().trim(),
-                $("#q7").val().trim(),
-                $("#q8").val().trim(),
-                $("#q8").val().trim(),
-                $("#q9").val().trim(),
-            ]
-        };
-        $.post("/api/friends", newFriend)
-        .done(function(data) {
-            console.log(data);
-            $("#match-name").html("<h2>" + data.matchName + "</h2>");
-            $("#match-photo").html("<img src = '" + data.matchPhoto + "'>");
-        })
+        var valid = true;
+        if ($("#name").val().trim() === "" || $("#photo").val().trim() === "") {
+            valid = false;
+        }
+        if (valid === false) {
+            $("#modal-label").html("All fields must be filled");
+        } else if (valid === true) {
+            var newFriend = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: [
+                    $("#q0").val().trim(),
+                    $("#q2").val().trim(),
+                    $("#q3").val().trim(),
+                    $("#q4").val().trim(),
+                    $("#q5").val().trim(),
+                    $("#q6").val().trim(),
+                    $("#q7").val().trim(),
+                    $("#q8").val().trim(),
+                    $("#q8").val().trim(),
+                    $("#q9").val().trim(),
+                ]
+            };
+            $.post("/api/friends", newFriend)
+            .done(function(data) {
+                console.log(data);
+                $("#match-name").html("<h2>" + data.matchName + "</h2>");
+                $("#match-photo").html("<img src = '" + data.matchPhoto + "'>");
+            })
+        }
     })
 
     </script>

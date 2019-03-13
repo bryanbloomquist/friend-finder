@@ -1,0 +1,22 @@
+body {
+    background-image: url("../images/NFF.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.transparent {
+    background: rgba(25,25,25,0.8);
+    border: 5px solid #dddddd;
+    margin: 20px;
+    padding: 20px;
+    color: #dddddd;
+}
+
+a {
+    color: #dddddd;
+}
+
+hr {
+    background-color: #dddddd;
+}
